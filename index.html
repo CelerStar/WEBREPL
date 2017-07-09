@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<meta charset="UTF-8" />
+	<meta name="Description" content="原作者 Damien George 赛灵开源社区 改版 本软件遵循 MIT 协议发布" />
+
+	<head>
+		<title>WEBREPL</title>
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			<div class="row " style="-webkit-app-region: drag;">
+				<div class="col-sm-12">
+
+					<div class="pull-left" style="">
+
+						<img src="images/logo.png" style="margin: 5px; width: 30px;" />
+						<span style="">
+	WEBREPL 1.0
+</span>
+					</div>
+					<div class="pull-right" style="margin-top: 10px; margin-bottom: 10px; margin-right: 10px; color: #ff0000;">
+						<input type="button" id="min" style="width: 25px;-webkit-app-region: no-drag;" value="-"/>
+						
+					
+						<input id="max" type="button" style="width: 25px;-webkit-app-region: no-drag;" value="O"/>
+						
+					
+
+						<input id="closeWin" type="button" style="width: 25px;-webkit-app-region: no-drag;" value="X"/>
+						
+					</input>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-sm-12" style="margin-top: -20px;">
+					<hr />
+				</div>
+			</div>
+		</div>
+
+		<div class="container" style="margin-left: -5px;">
+			<div class="row">
+				<div class="col-xs-4 " style="">
+
+					<div class="panel panel-primary">
+
+						<div class="panel-body">
+
+							<div class="row">
+								<div class="col-sm-12">
+
+									<div class="input-group">
+										<span class="input-group-addon">地址</span>
+										<input type="text" id="url" value="ws://192.168.4.1:8266/" class="form-control" placeholder="">
+										<span class="input-group-btn">
+            <button class="btn btn-success" id="button" type="button">连接设备</button>
+          </span>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div style="">
+
+								<div class="file-box">
+									<h4>脚本上传</h4>
+									<input type="file" id="put-file-select" style="display: none;" />
+									<input type="button" class="btn btn-primary" name="" id="put-file-select-d" value="选择文件" />
+									<input type="button" class="btn btn-warning" id="put-file-button" value="上传文件" onclick="put_file(); return false;" />
+
+									<div id="">
+										<span id="put-file-list" class="label label-info">未选择文件</span>
+
+									</div>
+
+								</div>
+
+								<div class="file-box">
+									<h4>系统操作</h4>
+
+									<div class="input-group">
+										<span class="input-group-addon">文件名称</span>
+										<input type="text" class="form-control" id="get_filename" value="" />
+									</div>
+
+									<br>
+									<input type="button" class="btn btn-success" value="下载文件" onclick="get_file(); return false;" />
+									<input type="button" class="btn btn-danger" style="display: none;" value="删除文件" onclick="get_file(); return false;" />
+
+								</div>
+
+								<div class="label label-info" id="file-status"><span>(文件操作状态)</span></div>
+
+								<hr />
+								<span>交互操作请点击交互区</span><br/>
+								<span>粘贴代码 Ctrl+A Ctrl+V</span>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="col-xs-8">
+
+					<div id="term">
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<div class="container-fluid col-sm-12" style="position: fixed; bottom: 0px;">
+
+			<div class="pull-right" style="font-size: 10px;" id="">
+				<a id="ESP8266">OpenIOE ESP8266</a> &
+				<a id="celerstar">赛灵开源社区</a>本软件遵循
+				<a>MIT</a>协议 发布
+			</div>
+
+		</div>
+		<script src="vendor/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8">
+		</script>
+		<script src="js/term.js"></script>
+		<script src="js/FileSaver.js"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
